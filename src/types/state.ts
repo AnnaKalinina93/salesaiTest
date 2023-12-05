@@ -1,12 +1,14 @@
-import { UserCard } from './cards';
+import { UserCard, UserCards } from './cards';
 import { RootState } from '../store/root-reduser';
 
 export type State = RootState
 
 export type UserData = {
-  userData: UserCard[],
+  userData: UserCards,
   userDataLoading: boolean,
   userDataError: boolean,
+  userCardChange: UserCard | null,
+  userCardDeleted: UserCard | null,
   isUserCardChange: boolean,
   isUserCardDelete: boolean,
 }

@@ -2,7 +2,7 @@ import axios, {
     AxiosInstance,
     AxiosResponse,
     AxiosError,
-    AxiosRequestConfig
+    InternalAxiosRequestConfig,
   } from 'axios';
   
   const BACKEND_URL = 'https://randomuser.me/api';
@@ -20,7 +20,8 @@ import axios, {
       (error: AxiosError) => Promise.reject(error),
     );
   
-    api.interceptors.request.use((config: AxiosRequestConfig) => config);
-  
+    api.interceptors.request.use(
+        (config: InternalAxiosRequestConfig) => config
+        );
     return api;
   };

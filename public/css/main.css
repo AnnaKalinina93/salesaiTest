@@ -1,0 +1,118 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #474747;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  max-width: 1200px;
+  padding: 20px;
+}
+.main-title {
+  font-family: InterSemiBold, serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #474747;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  min-width: 40%;
+  margin: 50px 20px;
+  padding: 20px;
+  box-shadow: 0 80px 37px #00000003, 0 50px 36px #0000000d,
+    0 20px 20px #00000017, 0 9px 20px #0000001a, 0 0 #0000001a;
+  border-radius: 10px;
+}
+
+.button-delete {
+  position: absolute;
+  right: 10px;
+  font-family: InterSemiBold, serif;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  background-color: #0977cd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.info-list {
+  list-style: none;
+  cursor: default;
+}
+
+.info-item {
+  margin-bottom: 30px;
+}
+
+.info-item h2 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.info-item p {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 1.5em;
+  color: #474747;
+  border: none;
+}
+
+input:active,
+input:hover,
+input:focus {
+  outline-color: #0977cd;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-list {
+  list-style: none;
+  display: flex;
+}
+
+.pagination-item {
+  cursor: pointer;
+  color: #fff;
+}
+
+.pagination-item a {
+  border: 1px solid transparent;
+  background-color: #0977cd;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: #0978cd67;
+}
+
+a:hover {
+  background-color: #0978cd67;
+}

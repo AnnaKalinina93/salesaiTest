@@ -13,5 +13,7 @@ export type UserCard = {
     
   }
 
-  
+export type UserCards = {
+    results: UserCard[],
+}
 
