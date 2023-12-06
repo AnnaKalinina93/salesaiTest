@@ -1,42 +1,28 @@
-import { ActionType } from '../../types/action';
-import { UserCard, UserCards } from '../../types/cards';
-import { createAction } from '@reduxjs/toolkit';
+import { ActionType } from '../../types/action'
+import { UserCard, UserCards } from '../../types/cards'
+import { createAction } from '@reduxjs/toolkit'
 
 export const userDataSucceeded = createAction(
   ActionType.UserDataSucceeded,
   (data: UserCards) => ({
     payload: data,
   }),
-);
+)
 
-export const userDataRequest = createAction(ActionType.UserDataRequest);
+export const userDataRequest = createAction(ActionType.UserDataRequest)
 
-export const userDataFailed = createAction(ActionType.UserDataFailed);
+export const userDataFailed = createAction(ActionType.UserDataFailed)
 
 export const changeUserDataCard = createAction(
-    ActionType.UserDataCardChange,
-    (data: UserCard) => ({
-      payload: data,
-    }),
-  );
+  ActionType.UserDataCardChange,
+  (data: UserCard) => ({
+    payload: data,
+  }),
+)
 
-  export const deleteUserDataCard = createAction(
-    ActionType.UserDataCardDeleted,
-    (data: UserCard) => ({
-      payload: data,
-    }),
-  );
-
-  export const isUserCardChange = createAction(
-    ActionType.IsUserCardChange,
-    (sUserCardChange: boolean | null) => ({
-      payload: sUserCardChange,
-    }),
-  );
-
-  export const isUserCardDelete = createAction(
-    ActionType.IsUserCardDeleted,
-    (isUserCardDelete: boolean | null) => ({
-      payload: isUserCardDelete,
-    }),
-  );
+export const deleteUserDataCard = createAction(
+  ActionType.UserDataCardDeleted,
+  (data: UserCard) => ({
+    payload: data,
+  }),
+)

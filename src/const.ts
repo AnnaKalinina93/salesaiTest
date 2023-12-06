@@ -1,2 +1,1 @@
-export const USER_COUNT = 100;
-
+export const USER_COUNT = 100

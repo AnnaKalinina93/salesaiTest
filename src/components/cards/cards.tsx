@@ -1,5 +1,5 @@
 import Card from "../card/card";
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import { getSelectedUsers, getUserDataError, getUserDataLoading } from "../../store/cards-data/selectors";
 
 
@@ -17,7 +17,7 @@ function Cards(): JSX.Element {
                 <h2>Произошла ошибка. Перезагрузите страницу.</h2>)}
 
             {userData.length > 1 && !userDataLoading && userData.map((card) => (
-                <Card key={card.id.name+card.id.value+card.email} card={card}/>
+                <Card key={card.id.name + card.id.value + card.email} card={card} />
             ))}
         </section>
     );

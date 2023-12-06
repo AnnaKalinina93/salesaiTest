@@ -1,13 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit'
-
 import { createAPI } from './services/api';
-import { ThunkAppDispatch } from './types/action';
 import { rootReducer } from './store/root-reduser';
 import { fetchUserDataAction } from './store/cards-data/api-action';
 import App from './components/app/app';
@@ -27,18 +23,13 @@ const store = configureStore({
 
 store.dispatch(fetchUserDataAction());
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-    <BrowserRouter>
-        <App/>
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(<Provider store={store}>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+</Provider>);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

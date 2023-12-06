@@ -14,7 +14,10 @@ export const getUserDataError = (state: State): boolean =>
 export const getSelectedUsers = createSelector(
   [getUserData, getActivePage],
   (userData, activePage) => {
-    const selectedUser: UserCard[] = userData.results.slice((activePage - 1 )* 10,activePage * 10)
+    const selectedUser: UserCard[] = userData.results.slice(
+      (activePage - 1) * 10,
+      activePage * 10,
+    )
     return selectedUser
   },
 )

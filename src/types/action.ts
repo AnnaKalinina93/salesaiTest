@@ -1,7 +1,7 @@
-import { ThunkAction, ThunkDispatch } from 'redux-thunk';
-import { Action } from 'redux';
-import { AxiosInstance } from 'axios';
-import { State } from '../types/state';
+import { ThunkAction, ThunkDispatch } from 'redux-thunk'
+import { Action } from 'redux'
+import { AxiosInstance } from 'axios'
+import { State } from '../types/state'
 
 export enum ActionType {
   UserDataSucceeded = 'cards/dataSucceeded',
@@ -9,9 +9,7 @@ export enum ActionType {
   UserDataFailed = 'cards/dataSucceededFailed',
   ActivePage = 'cards/activePage',
   UserDataCardChange = 'card/dataCardChange',
-  IsUserCardChange = 'card/isDataCardChange',
   UserDataCardDeleted = 'card/dataCardDeleted',
-  IsUserCardDeleted = 'card/isDataCardDeleted',
 }
 
 export type ThunkActionResult<R = Promise<void>> = ThunkAction<
